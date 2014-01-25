@@ -6,6 +6,8 @@
 
 package memory;
 
+import java.util.Scanner;
+
 /**
  *
  * @author Beej
@@ -19,14 +21,24 @@ public class Memory {
      * @param args the command line arguments
      */
     
-   function displayName {
-    System.out.println("name \n");
-}
-      function instructions {
-    System.out.println("instructions \n");
-}
+
     public static void main(String[] args) {
+      Memory myGame = new Memory();
+      myGame.getName();
+      myGame.displayHelp();
+      
         // TODO code application logic here
+        
+    }
+    public void getName () {
+              Scanner input = new Scanner(System.in);
+              System.out.println("Enter your name: ");
+              this.name = input.next();
+              
+        }
+    public void displayHelp () {
+        System.out.println("\nWelcome " + this.name + "\n");
+        System.out.println(this.instructions);
     }
     
 }
