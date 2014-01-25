@@ -12,4 +12,5 @@ package memory;
  */
 public class Board {
     
+    }
 }

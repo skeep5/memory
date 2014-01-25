@@ -12,7 +12,7 @@ import java.util.Scanner;
  *
  * @author Brandon^2
  */
-public class Memory {
+public class Memory {l;
     String name;
     String instructions = "This game is a memory game!\n\n"
             + "You will be chosing cards from a field that will have various\n"
