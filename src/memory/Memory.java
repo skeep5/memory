@@ -12,9 +12,19 @@ package memory;
  */
 public class Memory {
 
+    String name;
+    String instructions = "This is the Memory Game! \n\n";
+    
     /**
      * @param args the command line arguments
      */
+    
+   function displayName {
+    System.out.println("name \n");
+}
+      function instructions {
+    System.out.println("instructions \n");
+}
     public static void main(String[] args) {
         // TODO code application logic here
     }
