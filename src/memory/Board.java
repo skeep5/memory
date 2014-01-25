@@ -11,11 +11,9 @@ package memory;
  * @author Brandon Larsen
  */
 public class Board {
-    
     int boardWidth;
     int boardHeight;
-    
-    
+     
     public void boardWidthDisplay () {
 
         System.out.println(boardWidth);
