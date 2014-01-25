@@ -10,7 +10,7 @@ import java.util.Scanner;
 
 /**
  *
- * @author Beej
+ * @author Brandon Larsen
  */
 public class Memory {
 

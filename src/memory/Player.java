@@ -10,20 +10,20 @@ package memory;
  *
  * @author Brandon Larsen
  */
-public class Board {
-    
-    int boardWidth;
-    int boardHeight;
-    
-    
-    public void boardWidthDisplay () {
+public class Player {
 
-        System.out.println(boardWidth);
+    int wins;
+    int losses;
+    
+    
+    public void winsDisplay () {
+
+        System.out.println(wins);
               
         }
-    public void boardHeightDisplay () {
+    public void lossesDisplay () {
 
-        System.out.println(boardHeight);
+        System.out.println(losses);
     }
     
 }
