@@ -32,22 +32,22 @@ public class Player {
         
         if (wins<0){
             winningPercentage = -999;
-            System.out.println("Invaild number of wins!");
+            System.out.println("\nInvaild number of wins!");
             return winningPercentage;     
         }
         else if (losses<0){
             winningPercentage = -999;
-            System.out.println("Invaild number of losses!");
+            System.out.println("\nInvaild number of losses!");
             return winningPercentage;   
         }
         else if (ties<0){
             winningPercentage = -999;
-            System.out.println("Invaild number of ties!");
+            System.out.println("\nInvaild number of ties!");
             return winningPercentage;   
         }
         else {
             if (gamesPlayed==0){
-                System.out.println("You have no games played!");
+                System.out.println("\nYou have no games played!");
                 return winningPercentage;
                 }
             else {
