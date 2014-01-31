@@ -21,7 +21,7 @@ public class CompareCards {
     public int getCardOneVaule(){
         return 3; //function for pulling from a preset of array for the cards
     }
-    public int getChardTwoVaule(){
+    public int getCardTwoVaule(){
         return 7;//same fuction as above for card number two.
     }
     

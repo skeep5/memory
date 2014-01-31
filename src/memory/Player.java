@@ -26,4 +26,29 @@ public class Player {
         System.out.println(losses);
     }
     
+    public int getWinningPercentage(int wins, int losses, int ties){
+        int gamesPlayed = wins + losses + ties;
+        int winningPercentage = 0;
+        
+        if (wins<0){
+            winningPercentage = -999;
+            System.out.println("Invaild number of wins!");
+            return winningPercentage;     
+        }
+        else if (losses<0){
+            winningPercentage = -999;
+            System.out.println("Invaild number of losses!");
+            return winningPercentage;   
+        }
+        else if (ties<0){
+            winningPercentage = -999;
+            System.out.println("Invaild number of ties!");
+            return winningPercentage;   
+        }
+        else {
+            winningPercentage = Math.round((wins)/(gamesPlayed));
+            return winningPercentage;
+        }
+    }
+    
 }
