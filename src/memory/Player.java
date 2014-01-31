@@ -46,9 +46,15 @@ public class Player {
             return winningPercentage;   
         }
         else {
-            winningPercentage = Math.round((wins)/(gamesPlayed));
+            if (gamesPlayed==0){
+                System.out.println("You have no games played!");
+                return winningPercentage;
+                }
+            else {
+            winningPercentage = (wins/gamesPlayed)*100;
             return winningPercentage;
-        }
+                }
+            }
     }
     
 }
