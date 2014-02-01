@@ -38,7 +38,8 @@ public class Memory {
         myGame.getName();
         myGame.displayHelp();
         computer.setComputerSkill();
-        System.out.println("\nYour current winning percentage is: " + player.getWinningPercentage(4, 0, 3) + "%"); 
+        System.out.println("\nYour winning percentage is: " + player.getWinningPercentage(4, 2, 3) + "%");
+        System.out.println("\nComputer's winning percentage is: " + computer.getWinningPercentage(2, 4, 3) + "%");
         //computer.showComputerSkill();
     }
     public void getName(){
