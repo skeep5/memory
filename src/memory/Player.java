@@ -52,10 +52,10 @@ public class Player {
                 return winningPercentage;
                 }
             else {
-            float w = wins;
-            float g = gamesPlayed;
-            float calculatedPercentage = Math.round((w/g)*100);
-            return calculatedPercentage;
+                 float w = wins;
+                 float g = gamesPlayed;
+                 float calculatedPercentage = Math.round((w/g)*100);
+                 return calculatedPercentage;
                 }
             }
     }
