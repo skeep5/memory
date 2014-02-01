@@ -12,22 +12,21 @@ package memory;
  */
 public class Player {
 
-    int wins;
-    int losses;
+    int gameWins;
+    int gameLosses;
     
     
     public void winsDisplay () {
 
-        System.out.println(wins);
+        System.out.println(gameWins);
               
         }
     public void lossesDisplay () {
 
-        System.out.println(losses);
+       System.out.println(gameLosses);
     }
     
-    public int getWinningPercentage(int wins, int losses, int ties){
-        int gamesPlayed = wins + losses + ties;
+    public float getWinningPercentage(int wins, int losses, int ties){
         int winningPercentage = 0;
         
         if (wins<0){
@@ -46,13 +45,17 @@ public class Player {
             return winningPercentage;   
         }
         else {
+            int gamesPlayed = wins + losses + ties;
             if (gamesPlayed==0){
+                
                 System.out.println("\nYou have no games played!");
                 return winningPercentage;
                 }
             else {
-            winningPercentage = (wins/gamesPlayed)*100;
-            return winningPercentage;
+            float w = wins;
+            float g = gamesPlayed;
+            float calculatedPercentage = Math.round((w/g)*100);
+            return calculatedPercentage;
                 }
             }
     }

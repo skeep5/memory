@@ -4,7 +4,7 @@
  * and open the template in the editor.
  */
 
-package memory;
+package memory;    
 
 import java.util.Scanner;
 
@@ -28,11 +28,17 @@ public class Memory {
      */
     public static void main(String[] args) {
         Memory myGame = new Memory();
+        Player player = new Player();
+        Board board = new Board();
+        Card card = new Card();
+        Computer computer = new Computer();
+        CompareCards compare = new CompareCards();
+        PickCards pick = new PickCards();
+        
         myGame.getName();
         myGame.displayHelp();
-        
-        // TODO code application logic here
-     
+        System.out.println("\nYour current winning percentage is: " + player.getWinningPercentage(4, 0, 3) + "%");
+           
         
     }
     public void getName(){
