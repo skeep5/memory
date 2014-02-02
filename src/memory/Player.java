@@ -8,7 +8,7 @@ package memory;
 
 /**
  *
- * @author Brandon Larsen
+ * @author Brandon Larsen initially created this class
  */
 public class Player {
 

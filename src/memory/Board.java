@@ -24,4 +24,17 @@ public class Board {
         System.out.println(boardHeight);
     }
     
+    public float boardDimensions () {
+       int boardSize = boardWidth * boardHeight;
+       if (boardWidth < 1) {
+        System.out.println("There's something wrong with your board width. "); 
+       } else if (boardHeight < 1) {
+        System.out.println("There's something wrong with your board width. "); 
+       } else {
+       System.out.println("Your board size is " + boardWidth + "\n * " 
+               + boardHeight + "= " + boardSize);
+       }
+       return boardSize;
+}
+    
 }
