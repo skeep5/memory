@@ -15,7 +15,7 @@ public class Player {
     int gameWins;
     int gameLosses;
     
-    
+    //from here down coded by Brandon Urednick
     public void winsDisplay () {
 
         System.out.println(gameWins);
