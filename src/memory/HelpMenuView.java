@@ -17,9 +17,9 @@ public class HelpMenuView  {
     private final static String[][] menuItems = {
         {"B", "The board"},
         {"C", "A computer player"}, 
-        {"G", "The Tic-Tac-Toe game"},
-        {"L", "A location"},
-        {"M", "A marker"},
+        {"G", "The Memory game"},
+        {"S", "Selceting a card"},
+        {"M", "How matching works"},
         {"R", "A regular player"},        
         {"Q", "Quit Help"}        
     };
@@ -56,11 +56,11 @@ public class HelpMenuView  {
                 case "G":
                     this.helpMenuControl.displayGameHelp();
                     break;                  
-                case "L":
-                    this.helpMenuControl.displayLocationHelp();
+                case "S":
+                    this.helpMenuControl.displaySelectionHelp();
                     break;
                 case "M":
-                    this.helpMenuControl.displayMarkerHelp();
+                    this.helpMenuControl.displayMatchingHelp();
                     break;
                  case "R":
                     this.helpMenuControl.displayRealPlayerHelp();
