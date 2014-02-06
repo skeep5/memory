@@ -28,18 +28,24 @@ public class Memory {
      */
     public static void main(String[] args) {
         Memory myGame = new Memory();
+        
         Player player = new Player();
         Board board = new Board();
         Card card = new Card();
         Computer computer = new Computer();
         CompareCards compare = new CompareCards();
         PickCards pick = new PickCards();
+        HelpMenuView helpMenu = new HelpMenuView();
         
         myGame.getName();
         myGame.displayHelp();
+        
+        helpMenu.getInput();
+        
+        
         computer.setComputerSkill();
-        System.out.println("\nYour winning percentage is: " + player.getWinningPercentage(4, 2, 3) + "%");
-        System.out.println("\nComputer's winning percentage is: " + computer.getWinningPercentage(2, 4, 3) + "%");
+        //System.out.println("\nYour winning percentage is: " + player.getWinningPercentage(4, 2, 3) + "%");
+        //System.out.println("\nComputer's winning percentage is: " + computer.getWinningPercentage(2, 4, 3) + "%");
         //computer.showComputerSkill();
     }
     public void getName(){
