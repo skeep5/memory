@@ -20,10 +20,14 @@ public class HelpMenuControl  {
         System.out.println();
         this.displayHelpBorder();             
         System.out.println( 
-                "\tThe game board for Tic-Tac-Toe. It consist of a grid of "
-                + "\n\tlocations. Players place their marker on the different locations "
-                + "\n\ton the board in an effort to win the game. The default board is "
-                + "\n\t3 rows by 3 columns.");
+                "\tThe game board for Memory. \n "
+            + "You will be chosing cards from a field that will have various\n"
+            + "values on the back of the card. In order to score a point\n"
+            + "you must create a match by turning over two cards of the same\n"
+            + "value. The cards that are paired will then be removed from the\n"
+            + "game and your turn will continue. Mispair your selection and \n"
+            + "your opponent will get a turn. The player with the most pairs\n"
+            + "will win the game!");
         displayHelpBorder();
     }
     
@@ -33,10 +37,10 @@ public class HelpMenuControl  {
         System.out.println();
         displayHelpBorder();     
         System.out.println( 
-                 "\tThe objective of the game is to be the first player to mark three "
-                + "\n\tsquares vertically, horizontally or diagonally. Each player takes "
-                + "\n\tturns placing their marker in one of the locations on the "
-                + "\n\tboard. The first player to get \"three-in-a-row\" is the winner."
+                 "\tThe objective of the game is to be the player with the"
+                + "\n\thighest score after finding the most matches. "
+                + "\n\tWhen all matches are found, player scores are tallied "
+                + "\n\tand the winner will be displayed."
                 ); 
         displayHelpBorder();
     }
@@ -45,8 +49,10 @@ public class HelpMenuControl  {
         System.out.println();
         displayHelpBorder();     
         System.out.println( 
-                "\tA real player manually takes their turn by placing their mark "
-                + "\n\tin an unused location on the board."
+                "\tA real player manually takes their turn by selecting "
+                + "\n\ttwo cards to turn over. If the player finds a match,"
+                + "\n\tthey continue turning over 2 cards at a time until"
+                + "\n\tthey do not find a match or all matches are found."
                 ); 
         displayHelpBorder();
     }
@@ -62,22 +68,21 @@ public class HelpMenuControl  {
         displayHelpBorder();
     }
              
-    public void displayLocationHelp() {
+    public void displaySelectionHelp() {
         System.out.println();
         displayHelpBorder();     
         System.out.println( 
-               "\tA location on the board where a player can place their marker"
+               "\tChoosing the X and Y coordinates of the cards"
                 ); 
         displayHelpBorder();
     }
                  
-    public void displayMarkerHelp() {
+    public void displayMatchingHelp() {
         System.out.println();
         displayHelpBorder();     
         System.out.println( 
-               "\tA symbol that \"marks\" the locations in the board that are occupied "
-                + "by a player. "
-                + "\n\tThe default markers are \"X\" and \"O\"."
+               "\tCompares the two cards to see if a match is found."
+                + "\n\tIf a match is found, player's turn continues."
                 ); 
         displayHelpBorder();
     }
