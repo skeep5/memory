@@ -16,11 +16,11 @@ public class HelpMenuView  {
         
     private final static String[][] menuItems = {
         {"B", "The board"},
-        {"C", "A computer player"}, 
+        {"C", "The computer player"}, 
         {"G", "The Memory game"},
         {"S", "Selceting a card"},
         {"M", "How matching works"},
-        {"R", "A regular player"},        
+        {"R", "The player"},        
         {"Q", "Quit Help"}        
     };
     
@@ -78,11 +78,12 @@ public class HelpMenuView  {
 
         // displays the help menu
     public final void display() {
-        System.out.println("\n\t===============================================================");
-        System.out.println("\tEnter the letter associated with one of the following commands:");
-
+       System.out.println("\n\t===============================================================");
+        System.out.println("\t                             HELP MENU                           ");
+        System.out.println("\tEnter the letter associated with one of the following commands");
+        System.out.println("\tto learn more about that specific part of the game:");
         for (int i = 0; i < HelpMenuView.menuItems.length; i++) {
-            System.out.println("\t   " + menuItems[i][0] + "\t" + menuItems[i][1]);
+            System.out.println("\t   " + menuItems[i][0] + "\t-" + menuItems[i][1]);
         }
         System.out.println("\t===============================================================\n");
     }

@@ -13,7 +13,6 @@ import java.util.Scanner;
  * @author Brandon^2
  */
 public class Memory {
-    String name;
     String instructions = "This game is a memory game!\n\n"
             + "You will be chosing cards from a field that will have various\n"
             + "values on the back of the card. In order to score a point\n"
@@ -30,17 +29,20 @@ public class Memory {
         Memory myGame = new Memory();
         
         Player player = new Player();
-        Board board = new Board();
-        Card card = new Card();
-        Computer computer = new Computer();
-        CompareCards compare = new CompareCards();
-        PickCards pick = new PickCards();
-        HelpMenuView helpMenu = new HelpMenuView();
+        //Board board = new Board();
+        //Card card = new Card();
+        //Computer computer = new Computer();
+        //CompareCards compare = new CompareCards();
+        //PickCards pick = new PickCards();
+        //HelpMenuView helpMenu = new HelpMenuView();
+        MainMenuView mainMenu = new MainMenuView();
+        //OptionsMenuView optionsMenu = new OptionsMenuView();
         
-        myGame.getName();
-        //myGame.displayHelp();
+        Player.player.getName();
+        myGame.displayIntro();
         
-        helpMenu.getInput();
+        mainMenu.getInput();
+        //optionsMenu.getInput();
         
         
         //computer.setComputerSkill();
@@ -48,14 +50,9 @@ public class Memory {
         //System.out.println("\nComputer's winning percentage is: " + computer.getWinningPercentage(2, 4, 3) + "%");
         //computer.showComputerSkill();
     }
-    public void getName(){
-        Scanner input = new Scanner(System.in);
-        System.out.println("Enter your nickname: ");
-        this.name = input.next();
-        
-    }
-    public void displayHelp(){
-        System.out.println("\nWelcome " + this.name + ",\n");
+
+    public void displayIntro(){
+        System.out.println("\nWelcome,\n");
         System.out.println(this.instructions);
     }
     

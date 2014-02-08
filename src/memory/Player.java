@@ -6,16 +6,29 @@
 
 package memory;
 
+import java.util.Scanner;
+
 /**
  *
  * @author Brandon Larsen initially created this class
  */
 public class Player {
-
+    public static Player player = new Player();
     int gameWins;
     int gameLosses;
+    String name;
     
     //from here down coded by Brandon Urednick
+    public void getName(){
+        Scanner input = new Scanner(System.in);
+        System.out.println("Enter your nickname: ");
+        this.name = input.next();
+    }
+    
+    public String showName(){
+        return this.name;
+    }
+    
     public void winsDisplay () {
 
         System.out.println(gameWins);

@@ -14,28 +14,31 @@ import java.util.Scanner;
  * @author BrandonU
  */
 public class Computer {
+    public static Computer computer = new Computer();
+    
     //Default values for computer
     int skillLevel = 1;
     int computerWins = 0;
     int computerLoss = 0;
     int computerTies = 0;
     
-    public void showComputerSkill(){
+    public String showComputerSkill(){
         if (skillLevel == 1){
-            System.out.println("\nComputer Skill Level Set to: Easy");
+            return "Easy";
         }
         else if (skillLevel == 2){
-            System.out.println("\nComputer Skill Level Set to: Average");
+           return "Average";
         }
         else if (skillLevel == 3){
-            System.out.println("\nComputer Skill Level Set to: Hard");
+            return "Hard";
         }
         else if (skillLevel == 4){
-            System.out.println("\nComputer Skill Level Set to: Extreme");
+            return "Extreme";
         }
         else { 
             setComputerSkill();
         }
+        return null;
     }
     
     public void showComputerRecord(){
@@ -90,7 +93,7 @@ public class Computer {
         Scanner input = new Scanner(System.in);
         newSkillLevel = input.next();
         try{
-        skillLevel = parseInt(newSkillLevel);
+        this.skillLevel = parseInt(newSkillLevel);
         }
         catch (NumberFormatException e) {
         System.out.println("\nError: Use only vaild numbers, nothing else!");
