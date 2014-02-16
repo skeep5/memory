@@ -30,11 +30,14 @@ public class Memory {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        Memory memory = new Memory();
-        Player player = new Player();
-        MainMenuView mainMenu = new MainMenuView();
-        memory.displayIntro();
-        mainMenu.getInput();
+       // Memory memory = new Memory();
+       // Player player = new Player();
+       // MainMenuView mainMenu = new MainMenuView();
+      //  memory.displayIntro();
+       // mainMenu.getInput();
+        Card card = new Card();
+        card.displayCardValues();
+        card.displayIsPaired();
         }
 
     public void displayIntro(){

@@ -14,6 +14,9 @@ public class Card {
     
     int positionX;
     int positionY;
+    int numCards = 10;
+    int deck[] = {1, 2, 3, 4, 5, 5, 4, 3, 2, 1};
+    boolean isPaired[] = {false, false, false, false, false, false, false, false, false, false}; 
     String cardCharacter;
     
     
@@ -32,5 +35,24 @@ public class Card {
         System.out.println(cardCharacter);
     }
     
+    public void displayCardValues(){
+        for (int i =0;i<numCards;i++){
+                 System.out.println("Card "+ (i+1) + " value: " + deck[i]);
+        }
+    }
     
+    public void displayIsPaired(){
+        for (int i = 0; i<numCards;i++){
+            System.out.println("Card " + (i+1) +" "+ isCardPaired(i) + " paired.");
+        }
+    }
+    
+    public String isCardPaired(int card){
+        if (isPaired[card] == false){
+        return "IS NOT";}
+        else{return "IS";}
+    }
+        
 }
+    
+    
