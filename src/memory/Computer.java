@@ -14,13 +14,12 @@ import java.util.Scanner;
  * @author BrandonU
  */
 public class Computer {
-    public static Computer computer = new Computer();
-    
+       
     //Default values for computer
     int skillLevel = 1;
-    int computerWins = 0;
-    int computerLoss = 0;
-    int computerTies = 0;
+    int computerWins;
+    int computerLoss;
+    int computerTies;
     
     public String showComputerSkill(){
         if (skillLevel == 1){
@@ -96,7 +95,8 @@ public class Computer {
         this.skillLevel = parseInt(newSkillLevel);
         }
         catch (NumberFormatException e) {
-        System.out.println("\nError: Use only vaild numbers, nothing else!");
+        new memoryError().displayError("Use only vaild numbers, nothing else!");
+        //System.out.println("\nError: Use only vaild numbers, nothing else!");
         setComputerSkill();
         break;
         }
@@ -117,7 +117,7 @@ public class Computer {
             validValue = true;
         }
         else{
-            System.out.println("\nInvalid Skill Level!");
+            new memoryError().displayError("Invalid Skill Level!");
             validValue = false;
         }
     }

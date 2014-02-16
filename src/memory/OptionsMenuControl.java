@@ -4,22 +4,23 @@ package memory;
  */
 public class OptionsMenuControl  {
     
-     //private final Computer computer = new Computer();
+     private final Computer computer = new Computer();
      
     public OptionsMenuControl() {    
     } 
 
     public void changeComputerSkillLevel() {
-        Computer.computer.setComputerSkill();
+       computer.setComputerSkill();
     }
         
     public void displayChangeNickName() {
-        System.out.println();
-        displayBorder();     
-        System.out.println( 
-                 "Change Nickname function to be called here."
-                ); 
-        displayBorder();
+      Player.class.getName();
+        //System.out.println();
+        //displayBorder();     
+        //System.out.println( 
+         //        "Change Nickname function to be called here."
+          //      ); 
+        //displayBorder();
     }
             
     public void displayResetGameRecords() {

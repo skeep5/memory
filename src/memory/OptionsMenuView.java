@@ -8,8 +8,8 @@ public class OptionsMenuView  {
         // private final Computer computer = new Computer();
          
     private String[][] menuItems = {
-        {"N", "Change nickname (Current nickname: "+ Player.player.showName() +")"},
-        {"S", "Change computer skill level (Current Level: " +Computer.computer.showComputerSkill()+ ")"}, 
+        {"N", "Change nickname"},
+        {"S", "Change computer skill level"}, 
         {"B", "Change board size"},
         {"C", "Clear game records"},       
         {"Q", "Quit to Main Menu"}        
@@ -31,16 +31,16 @@ public class OptionsMenuView  {
             
             switch (command) {
                 case "N":
-                    this.optionsMenuControl.displayChangeNickName();
+                    optionsMenuControl.displayChangeNickName();
                     break;
                 case "S":
-                    this.optionsMenuControl.changeComputerSkillLevel();
+                    optionsMenuControl.changeComputerSkillLevel();
                     break;
                 case "C":
-                    this.optionsMenuControl.displayResetGameRecords();
+                    optionsMenuControl.displayResetGameRecords();
                     break;
                 case "B":
-                    this.optionsMenuControl.displayChangeBoardSize();
+                    optionsMenuControl.displayChangeBoardSize();
                 case "Q": 
                     break;
                 default: 

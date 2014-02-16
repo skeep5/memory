@@ -13,10 +13,10 @@ import java.util.Scanner;
  * @author Brandon Larsen initially created this class
  */
 public class Player {
-    public static Player player = new Player();
+    //public static Player player = new Player();
     int gameWins;
     int gameLosses;
-    String name;
+    public String name = "Player1";
     
     //from here down coded by Brandon Urednick
     public void getName(){
