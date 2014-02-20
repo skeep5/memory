@@ -31,13 +31,14 @@ public class Memory {
      */
     public static void main(String[] args) {
        // Memory memory = new Memory();
-       // Player player = new Player();
+       Player player = new Player();
        // MainMenuView mainMenu = new MainMenuView();
       //  memory.displayIntro();
        // mainMenu.getInput();
-        Card card = new Card();
-        card.displayCardValues();
-        card.displayIsPaired();
+        //Card card = new Card();
+       // card.displayCardValues();
+      //  card.displayIsPaired();
+       player.highScore(); 
         }
 
     public void displayIntro(){

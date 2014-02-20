@@ -17,8 +17,71 @@ public class Player {
     int gameWins;
     int gameLosses;
     public String name = "Player1";
+    int highScore[] = {20, 35, 60, 10, 70};
+    //String highScoreName [];
     
     //from here down coded by Brandon Urednick
+    public void sortHighScore(int highScore[]){
+     //Descending Order Sort
+     int i, j, first, temp;  
+     for (i=highScore.length-1; i>0; i--)  
+     {
+          first = 0;
+          for(j = 1; j <= i; j ++)
+          {
+               if( highScore[j] < highScore[first] )         
+                 first = j;
+          }
+          temp = highScore[ first ];
+          highScore[first] = highScore[i];
+          highScore[i] = temp; 
+      }  
+    }
+    
+    public void highScore(){
+        checkHighScore(highScore, 65);
+    }
+    
+    public void enterHighScore(int score, int length){
+       Scanner input = new Scanner(System.in);
+       //highScoreName[length] = input.next();
+       highScore[length-1] = score;  
+    }
+    
+    public void checkHighScore(int hScore[], int score){
+        int length = hScore.length;
+        
+        System.out.println("\n\tHigh Score List before new score is added,\n"
+                         + "\tthe array is unsorted.");
+        displayHighScore(hScore);
+        
+        System.out.println("\n\tHigh Score List before new score is added,\n"
+                         + "\tthe array is sorted.");
+        sortHighScore(hScore);
+        displayHighScore(hScore);
+        if (hScore[length-1] < score){
+            
+        System.out.println("\n\tHigh Score List after new score is added,\n"
+                         + "\tthe array is not sorted.");
+            enterHighScore(score, length);
+            displayHighScore(hScore);
+           
+            sortHighScore(hScore);
+            System.out.println("\n\tHigh Score List After new score is added\n"
+                         + "\tthen resorted in the array.");
+            displayHighScore(hScore);
+        }
+        }
+    
+    public void displayHighScore(int gameHighScore[]){
+        for (int i =0;i<gameHighScore.length;i++){
+                 
+                 System.out.println("\t#" + (i+1) + " High Score: " + gameHighScore[i]);
+        }        
+    }
+        
+   
+    
     public void getName(){
         Scanner input = new Scanner(System.in);
         System.out.println("Enter your nickname: ");

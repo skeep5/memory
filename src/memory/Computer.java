@@ -96,7 +96,6 @@ public class Computer {
         }
         catch (NumberFormatException e) {
         new memoryError().displayError("Use only vaild numbers, nothing else!");
-        //System.out.println("\nError: Use only vaild numbers, nothing else!");
         setComputerSkill();
         break;
         }
