@@ -19,6 +19,11 @@ public class Card {
     boolean isPaired[] = {false, false, false, false, false, false, false, false, false, false}; 
     String cardCharacter;
     
+    public void assignCardValues(){
+        for(int x : deck){
+            deck[x]=(int) Math.random();
+        }
+    }
     
     public void positionXDisplay () {
 
