@@ -36,8 +36,9 @@ public class Memory {
       //  memory.displayIntro();
        // mainMenu.getInput();
        Card card = new Card();
-       card.assignCardValues();
+       //card.assignCardValues();
        card.displayCardValues();
+       card.checkValidDeck();
       //  card.displayIsPaired();
        // player.highScore(); 
         }
