@@ -6,18 +6,56 @@
 
 package memory;
 
+import java.io.Serializable;
 import java.util.Scanner;
 
 /**
  *
  * @author Brandon Larsen initially created this class
  */
-public class Player {
+public class Player implements Serializable{
     //public static Player player = new Player();
-    int gameWins;
-    int gameLosses;
-    public String name = "Player1";
-    int highScore[] = {20, 35, 60, 10, 70};
+    private int gameWins;
+    private int gameLosses;
+    private String name = "Player1";
+    private int highScore[] = {20, 35, 60, 10, 70};
+
+    public Player() {   
+    }
+
+    public int getGameWins() {
+        return gameWins;
+    }
+
+    public void setGameWins(int gameWins) {
+        this.gameWins = gameWins;
+    }
+
+    public int getGameLosses() {
+        return gameLosses;
+    }
+
+    public void setGameLosses(int gameLosses) {
+        this.gameLosses = gameLosses;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public int[] getHighScore() {
+        return highScore;
+    }
+
+    public void setHighScore(int[] highScore) {
+        this.highScore = highScore;
+    }
+    
+    
     //String highScoreName [];
     
     //from here down coded by Brandon Urednick
@@ -82,7 +120,7 @@ public class Player {
         
    
     
-    public void getName(){
+    public void getName2(){
         Scanner input = new Scanner(System.in);
         System.out.println("Enter your nickname: ");
         this.name = input.next();
