@@ -10,57 +10,20 @@ import java.io.Serializable;
 import java.util.Scanner;
 
 /**
- *
  * @author Brandon Larsen initially created this class
  */
 public class Player implements Serializable{
-    //public static Player player = new Player();
     private int gameWins;
     private int gameLosses;
-    private String name = "Player1";
-    private int highScore[] = {20, 35, 60, 10, 70};
+    private int gameDraws;
+    private static String name;
 
-    public Player() {   
-    }
-
-    public int getGameWins() {
-        return gameWins;
-    }
-
-    public void setGameWins(int gameWins) {
-        this.gameWins = gameWins;
-    }
-
-    public int getGameLosses() {
-        return gameLosses;
-    }
-
-    public void setGameLosses(int gameLosses) {
-        this.gameLosses = gameLosses;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public int[] getHighScore() {
-        return highScore;
-    }
-
-    public void setHighScore(int[] highScore) {
-        this.highScore = highScore;
-    }
+    private class Score{
+        
+        int score;
+        int highScore[];
     
-    
-    //String highScoreName [];
-    
-    //from here down coded by Brandon Urednick
     public void sortHighScore(int highScore[]){
-     //Descending Order Sort
      int i, j, first, temp;  
      for (i=highScore.length-1; i>0; i--)  
      {
@@ -118,9 +81,44 @@ public class Player implements Serializable{
         }        
     }
         
-   
+    }
     
-    public void getName2(){
+    public Player() {
+    }
+
+    public int getGameWins() {
+        return gameWins;
+    }
+
+    public void setGameWins(int gameWins) {
+        this.gameWins = gameWins;
+    }
+
+    public int getGameLosses() {
+        return gameLosses;
+    }
+
+    public void setGameLosses(int gameLosses) {
+        this.gameLosses = gameLosses;
+    }
+
+    public int getGameDraws() {
+        return gameDraws;
+    }
+
+    public void setGameDraws(int gameDraws) {
+        this.gameDraws = gameDraws;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+    
+    public void createName(){
         Scanner input = new Scanner(System.in);
         System.out.println("Enter your nickname: ");
         this.name = input.next();
@@ -128,16 +126,6 @@ public class Player implements Serializable{
     
     public String showName(){
         return this.name;
-    }
-    
-    public void winsDisplay () {
-
-        System.out.println(gameWins);
-              
-        }
-    public void lossesDisplay () {
-
-       System.out.println(gameLosses);
     }
     
     public float getWinningPercentage(int wins, int losses, int ties){
