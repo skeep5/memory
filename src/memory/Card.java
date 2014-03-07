@@ -6,19 +6,80 @@
 
 package memory;
 
+import java.io.Serializable;
+
 /**
  *
  * @author Brandon Larsen
  */
-public class Card {
+public class Card implements Serializable {
     
-    int positionX;
-    int positionY;
-    int numCards = 10;
-    int deck[] = {0, 1, 2, 3, 4, 5, 6, 7, 8, 9};
-    int deck2[] = {1, 2, 3, 4, 5, 5, 4, 3, 2, 1};
-    boolean isPaired[] = {false, false, false, false, false, false, false, false, false, false}; 
-    String cardCharacter;
+    private int positionX;
+    private int positionY;
+    private int numCards = 10;
+    private int deck[] = {0, 1, 2, 3, 4, 5, 6, 7, 8, 9};
+    private int deck2[] = {1, 2, 3, 4, 5, 5, 4, 3, 2, 1};
+    private boolean isPaired[] = {false, false, false, false, false, false, false, false, false, false}; 
+    private String cardCharacter;
+
+    public Card() {
+    }
+
+    public int getPositionX() {
+        return positionX;
+    }
+
+    public void setPositionX(int positionX) {
+        this.positionX = positionX;
+    }
+
+    public int getPositionY() {
+        return positionY;
+    }
+
+    public void setPositionY(int positionY) {
+        this.positionY = positionY;
+    }
+
+    public int getNumCards() {
+        return numCards;
+    }
+
+    public void setNumCards(int numCards) {
+        this.numCards = numCards;
+    }
+
+    public int[] getDeck() {
+        return deck;
+    }
+
+    public void setDeck(int[] deck) {
+        this.deck = deck;
+    }
+
+    public int[] getDeck2() {
+        return deck2;
+    }
+
+    public void setDeck2(int[] deck2) {
+        this.deck2 = deck2;
+    }
+
+    public boolean[] getIsPaired() {
+        return isPaired;
+    }
+
+    public void setIsPaired(boolean[] isPaired) {
+        this.isPaired = isPaired;
+    }
+
+    public String getCardCharacter() {
+        return cardCharacter;
+    }
+
+    public void setCardCharacter(String cardCharacter) {
+        this.cardCharacter = cardCharacter;
+    }
     
     public void assignCardValues(){
         for(int x : deck){
