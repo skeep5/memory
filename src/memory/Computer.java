@@ -6,6 +6,7 @@
 
 package memory;
 
+import java.io.Serializable;
 import static java.lang.Integer.parseInt;
 import java.util.Scanner;
 
@@ -13,13 +14,48 @@ import java.util.Scanner;
  *
  * @author BrandonU
  */
-public class Computer {
+public class Computer implements Serializable{
        
-    //Default values for computer
-    int skillLevel = 1;
-    int computerWins;
-    int computerLoss;
-    int computerTies;
+    private int skillLevel = 1;
+    private int computerWins;
+    private int computerLoss;
+    private int computerTies;
+
+    public Computer() {
+    }
+
+    public int getSkillLevel() {
+        return skillLevel;
+    }
+
+    public void setSkillLevel(int skillLevel) {
+        this.skillLevel = skillLevel;
+    }
+
+    public int getComputerWins() {
+        return computerWins;
+    }
+
+    public void setComputerWins(int computerWins) {
+        this.computerWins = computerWins;
+    }
+
+    public int getComputerLoss() {
+        return computerLoss;
+    }
+
+    public void setComputerLoss(int computerLoss) {
+        this.computerLoss = computerLoss;
+    }
+
+    public int getComputerTies() {
+        return computerTies;
+    }
+
+    public void setComputerTies(int computerTies) {
+        this.computerTies = computerTies;
+    }
+    
     
     public String showComputerSkill(){
         if (skillLevel == 1){
@@ -45,7 +81,7 @@ public class Computer {
         +"and "+computerLoss+" losses.\n");
     }
     
-    public float getWinningPercentage(int wins, int losses, int ties){
+    private float getWinningPercentage(int wins, int losses, int ties){
         int winningPercentage = 0;
         
         if (wins<0){

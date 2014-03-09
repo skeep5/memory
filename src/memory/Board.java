@@ -6,25 +6,49 @@
 
 package memory;
 
+import java.io.Serializable;
+
 /**
  *
  * @author Brandon Larsen
  */
-public class Board {
-    int boardWidth;
-    int boardHeight;
+public class Board implements Serializable {
+    
+    private int boardWidth;
+    private int boardHeight;
      
+    public Board() {
+    }
+
+    public int getBoardWidth() {
+        return boardWidth;
+    }
+
+    public void setBoardWidth(int boardWidth) {
+        this.boardWidth = boardWidth;
+    }
+
+    public int getBoardHeight() {
+        return boardHeight;
+    }
+
+    public void setBoardHeight(int boardHeight) {
+        this.boardHeight = boardHeight;
+    }
+    
+    
+   
     public void boardWidthDisplay () {
 
         System.out.println(boardWidth);
               
         }
-    public void boardHeightDisplay () {
+    private void boardHeightDisplay () {
 
         System.out.println(boardHeight);
     }
     
-    public float boardDimensions () {
+    private float boardDimensions () {
        int boardSize = boardWidth * boardHeight;
        if (boardWidth < 1) {
         System.out.println("There's something wrong with your board width. "); 

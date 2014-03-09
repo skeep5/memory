@@ -6,22 +6,46 @@
 
 package memory;
 
+import java.io.Serializable;
+
 /**
  *
  * @author BrandonU
  */
-public class CompareCards {
-    int cardOneValue = 0;
-    int cardTwoValue = 0;
+public class CompareCards implements Serializable {
+    private int cardOneValue = 0;
+    private int cardTwoValue = 0;
+    
+    public CompareCards() {
+    }
+
+    public int getCardOneValue() {
+        return cardOneValue;
+    }
+
+    public void setCardOneValue(int cardOneValue) {
+        this.cardOneValue = cardOneValue;
+    }
+
+    public int getCardTwoValue() {
+        return cardTwoValue;
+    }
+
+    public void setCardTwoValue(int cardTwoValue) {
+        this.cardTwoValue = cardTwoValue;
+    }
+    
+    
+    
     
     public void showCardValues(){
         System.out.println("Card One Value: " + cardOneValue + "\n"
         + "Card Two Value: " + cardTwoValue);
     }
-    public int getCardOneVaule(){
+    private int getCardOneVaule(){
         return 3; //function for pulling from a preset of array for the cards
     }
-    public int getCardTwoVaule(){
+    private int getCardTwoVaule(){
         return 7;//same fuction as above for card number two.
     }
     
