@@ -12,10 +12,10 @@ import java.util.Scanner;
  *
  * @author Brandon Larsen 
  */
-public class HelpMenuControl  {
+public class HelpMenuControl  extends MenuControl{
     
     public HelpMenuControl() {
-        
+       // super();
     } 
 
     public void displayBoardHelp() {
@@ -109,6 +109,7 @@ public class HelpMenuControl  {
     }
     
     
+    @Override
     public void displayBorder() {       
         System.out.println("\t===============================================================");
     }

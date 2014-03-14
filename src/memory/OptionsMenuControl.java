@@ -2,11 +2,12 @@ package memory;
 /**
  * @author BrandonU
  */
-public class OptionsMenuControl  {
+public class OptionsMenuControl extends MenuControl {
     
      private final Computer computer = new Computer();
      
     public OptionsMenuControl() {    
+       // super();
     } 
 
     public void changeComputerSkillLevel() {
@@ -41,8 +42,8 @@ public class OptionsMenuControl  {
         displayBorder();
     }
     
+     @Override
     public void displayBorder() {       
-        System.out.println(
-        "\t~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
+        System.out.println("\t===============================================================");
     }
 }

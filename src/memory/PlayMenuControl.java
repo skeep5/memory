@@ -2,9 +2,10 @@ package memory;
 /**
  * @author Brandon Larsen
  */
-public class PlayMenuControl {
+public class PlayMenuControl extends MenuControl {
     
     public PlayMenuControl() {   
+       // super();
     } 
 
         public void startComputerGame() {
@@ -25,8 +26,8 @@ public class PlayMenuControl {
         displayBorder();
         }
        
+    @Override
         public void displayBorder() {       
-        System.out.println(
-        "\t~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
+       System.out.println("\t===============================================================");
     }
 }
