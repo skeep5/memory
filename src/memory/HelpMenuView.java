@@ -23,7 +23,6 @@ public class HelpMenuView  {
         {"R", "The player"},        
         {"Q", "Quit Help"}        
     };
-   
     
     // Create instance of the HelpMenuControl (action) class
     private HelpMenuControl helpMenuControl = new HelpMenuControl();
@@ -47,26 +46,26 @@ public class HelpMenuView  {
             command = inFile.nextLine();
             command = command.trim().toUpperCase();
             
-            switch (command.charAt(0)) {
-                case 'B':
+            switch (command) {
+                case "B":
                     this.helpMenuControl.displayBoardHelp();
                     break;
-                case 'C':
+                case "C":
                     this.helpMenuControl.displayComputerPlayerHelp();
                     break;
-                case 'G':
+                case "G":
                     this.helpMenuControl.displayGameHelp();
                     break;                  
-                case 'S':
+                case "S":
                     this.helpMenuControl.displaySelectionHelp();
                     break;
-                case 'M':
+                case "M":
                     this.helpMenuControl.displayMatchingHelp();
                     break;
-                 case 'R':
+                 case "R":
                     this.helpMenuControl.displayRealPlayerHelp();
                     break; 
-                case 'Q': 
+                case "Q": 
                     break;
                 default: 
                     new memoryError().displayError("Invalid command. Please enter a valid command.");
