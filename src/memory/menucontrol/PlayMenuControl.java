@@ -1,4 +1,4 @@
-package memory;
+package memory.menucontrol;
 /**
  * @author Brandon Larsen
  */

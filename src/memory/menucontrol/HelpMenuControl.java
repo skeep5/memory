@@ -4,9 +4,10 @@
  * and open the template in the editor.
  */
 
-package memory;
+package memory.menucontrol;
 
 import java.util.Scanner;
+import memory.DisplayInfo;
 
 /**
  *

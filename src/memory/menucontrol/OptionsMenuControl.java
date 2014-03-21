@@ -1,4 +1,9 @@
-package memory;
+package memory.menucontrol;
+
+import memory.Computer;
+import memory.MenuControl;
+import memory.Player;
+
 /**
  * @author BrandonU
  */

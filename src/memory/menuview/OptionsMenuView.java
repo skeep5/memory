@@ -1,5 +1,7 @@
-package memory;
+package memory.menuview;
 import java.util.Scanner;
+import memory.memoryError;
+import memory.menucontrol.OptionsMenuControl;
 /**
  * @author BrandonU
  */

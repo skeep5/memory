@@ -1,4 +1,9 @@
-package memory;
+package memory.menucontrol;
+
+import memory.menuview.HelpMenuView;
+import memory.menuview.OptionsMenuView;
+import memory.menuview.PlayMenuView;
+
 /**
  * @author BrandonU
  */

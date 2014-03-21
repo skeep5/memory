@@ -2,9 +2,11 @@
  * To change this template, choose Tools | Templates
  * and open the template in the editor.
  */
-package memory;
+package memory.menuview;
 
 import java.util.Scanner;
+import memory.memoryError;
+import memory.menucontrol.HelpMenuControl;
 
 
 

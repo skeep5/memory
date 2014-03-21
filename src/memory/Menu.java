@@ -10,6 +10,6 @@ package memory;
  *
  * @author airwad2014
  */
-public class Menu {
+public abstract class Menu implements DisplayInfo {
     
 }
