@@ -14,7 +14,7 @@ import java.util.Scanner;
  */
 public class Memory {
       
-    String instructions = 
+     String instructions = 
               "\t==================================================================\n"
             + "\t                          THE MEMORY GAME\n"
             + "\tYou will be chosing cards from a field that will have various\n"
