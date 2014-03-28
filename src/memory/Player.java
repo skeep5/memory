@@ -16,7 +16,7 @@ public class Player implements Serializable{
     private int gameWins;
     private int gameLosses;
     private int gameDraws;
-    private static String name;
+    private static String name = null ;
 
     private class Score{
         
@@ -115,17 +115,17 @@ public class Player implements Serializable{
     }
 
     public void setName(String name) {
-        this.name = name;
+        Player.name = name;
     }
     
     public void createName(){
         Scanner input = new Scanner(System.in);
         System.out.println("Enter your nickname: ");
-        this.name = input.next();
+        Player.name = input.next();
     }
     
     public String showName(){
-        return this.name;
+        return Player.name;
     }
     
     public float getWinningPercentage(int wins, int losses, int ties){

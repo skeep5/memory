@@ -11,5 +11,6 @@ package memory;
  * @author airwad2014
  */
 public abstract class Menu implements DisplayInfo {
+    private String[][] menuItems = null;
     
 }

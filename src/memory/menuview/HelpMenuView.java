@@ -5,7 +5,7 @@
 package memory.menuview;
 
 import java.util.Scanner;
-import memory.memoryError;
+import memory.exceptions.memoryError;
 import memory.menucontrol.HelpMenuControl;
 
 

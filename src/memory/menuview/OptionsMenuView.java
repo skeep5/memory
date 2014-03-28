@@ -1,6 +1,7 @@
 package memory.menuview;
 import java.util.Scanner;
-import memory.memoryError;
+import memory.exceptions.MenuException;
+import memory.exceptions.memoryError;
 import memory.menucontrol.OptionsMenuControl;
 /**
  * @author BrandonU
@@ -22,7 +23,7 @@ public class OptionsMenuView  {
     public OptionsMenuView() {
     } 
     
-    public void getInput() {       
+    public void getInput() throws MenuException {       
         String command;
         Scanner inFile = new Scanner(System.in);
         

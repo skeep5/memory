@@ -3,6 +3,7 @@ package memory.menucontrol;
 import memory.Computer;
 import memory.MenuControl;
 import memory.Player;
+import memory.exceptions.MenuException;
 
 /**
  * @author BrandonU
@@ -19,14 +20,11 @@ public class OptionsMenuControl extends MenuControl {
        computer.setComputerSkill();
     }
         
-    public void displayChangeNickName() {
-      Player.class.getName();
-        //System.out.println();
-        //displayBorder();     
-        //System.out.println( 
-         //        "Change Nickname function to be called here."
-          //      ); 
-        //displayBorder();
+    public void displayChangeNickName() throws MenuException {
+      String name = Player.class.getName();
+      if (name == null){
+          throw new MenuException("There is no vaild name!");
+      }
     }
             
     public void displayResetGameRecords() {

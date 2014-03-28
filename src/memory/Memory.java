@@ -7,6 +7,8 @@
 package memory;    
 
 import java.util.Scanner;
+import java.lang.Throwable;
+import java.lang.Error;
 
 /**
  *
@@ -30,7 +32,9 @@ public class Memory {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-      Memory memory = new Memory();
+        try{
+            
+            Memory memory = new Memory();
       // Player player = new Player();
        MainMenuView mainMenu = new MainMenuView();
        memory.displayIntro();
@@ -41,6 +45,19 @@ public class Memory {
        //card.checkValidDeck();
       //  card.displayIsPaired();
        // player.highScore(); 
+        }
+        
+        catch(Throwable ex){
+          
+        Error.displayErorrMsg("Unexpected error: " + ex.getMessage());
+        Error.displayErorrMsg(ex.getStackTrace().toString());
+            
+        }
+        finally{
+           // Memory.inFile.close();
+        }
+        
+      
         }
 
     public void displayIntro(){

@@ -6,15 +6,17 @@
 
 package memory;
 
+import memory.exceptions.memoryError;
 import java.io.Serializable;
 import static java.lang.Integer.parseInt;
 import java.util.Scanner;
+import memory.exceptions.MenuException;
 
 /**
  *
  * @author BrandonU
  */
-public class Computer implements Serializable{
+public class Computer implements Serializable {
        
     private int skillLevel = 1;
     private int computerWins;
@@ -131,7 +133,7 @@ public class Computer implements Serializable{
         this.skillLevel = parseInt(newSkillLevel);
         }
         catch (NumberFormatException e) {
-        new memoryError().displayError("Use only vaild numbers, nothing else!");
+            new memoryError().displayError("Use only vaild numbers, nothing else!");
         setComputerSkill();
         break;
         }
