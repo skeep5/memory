@@ -6,6 +6,7 @@
 
 package memory;    
 
+import Frames.MainFrame;
 import java.util.Scanner;
 import java.lang.Throwable;
 import java.lang.Error;
@@ -15,6 +16,7 @@ import java.lang.Error;
  * @author Brandon^2
  */
 public class Memory {
+    private static MainFrame mainFrame;
       
      String instructions = 
               "\t==================================================================\n"
@@ -32,29 +34,30 @@ public class Memory {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
+        
         try{
             
             Memory memory = new Memory();
-      // Player player = new Player();
-       MainMenuView mainMenu = new MainMenuView();
-       memory.displayIntro();
-       mainMenu.getInput();
-       //Card card = new Card();
-       //card.assignCardValues();
-       //card.displayCardValues();
-       //card.checkValidDeck();
-      //  card.displayIsPaired();
-       // player.highScore(); 
+            java.awt.EventQueue.invokeLater(new Runnable() {
+                public void run() {
+                    Memory.mainFrame = new MainFrame();
+                    
+                    Memory.mainFrame.setVisible(true);
+                    
+                }
+            });
         }
         
         catch(Throwable ex){
           
-        Error.displayErorrMsg("Unexpected error: " + ex.getMessage());
-        Error.displayErorrMsg(ex.getStackTrace().toString());
+    //    Error.displayErorrMsg("Unexpected error: " + ex.getMessage());
+     //   Error.displayErorrMsg(ex.getStackTrace().toString());
             
         }
         finally{
-           // Memory.inFile.close();
+           if (Memory.mainFrame != null) {
+               Memory.mainFrame.dispose();
+           }
         }
         
       
