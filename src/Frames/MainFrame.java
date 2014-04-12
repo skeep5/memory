@@ -50,7 +50,7 @@ public class MainFrame extends javax.swing.JFrame {
         jpTitle.setBackground(new java.awt.Color(188, 234, 255));
 
         jlTitle.setFont(new java.awt.Font("Souvenir", 2, 24)); // NOI18N
-        jlTitle.setText("Memory");
+        jlTitle.setText("Java Memory");
 
         javax.swing.GroupLayout jpTitleLayout = new javax.swing.GroupLayout(jpTitle);
         jpTitle.setLayout(jpTitleLayout);
@@ -58,8 +58,8 @@ public class MainFrame extends javax.swing.JFrame {
             jpTitleLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jpTitleLayout.createSequentialGroup()
                 .addGap(142, 142, 142)
-                .addComponent(jlTitle, javax.swing.GroupLayout.PREFERRED_SIZE, 102, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(190, Short.MAX_VALUE))
+                .addComponent(jlTitle)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jpTitleLayout.setVerticalGroup(
             jpTitleLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -130,7 +130,7 @@ public class MainFrame extends javax.swing.JFrame {
         jtWelcome.setColumns(20);
         jtWelcome.setLineWrap(true);
         jtWelcome.setRows(5);
-        jtWelcome.setText("Welcome to the Memory Game!");
+        jtWelcome.setText("Welcome to the Memory Game!\n\nWritten and designed by:\nBrandon Larsen\nAaron Woodward\nBrandon Urednick\n\n(CIT260 Team \"3, 5, 7...?\")");
         jtWelcome.setWrapStyleWord(true);
         jtWelcome.setMargin(new java.awt.Insets(5, 5, 5, 5));
         jScrollPane1.setViewportView(jtWelcome);
@@ -145,16 +145,17 @@ public class MainFrame extends javax.swing.JFrame {
                 .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 249, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(22, Short.MAX_VALUE))
         );
         jpBodyLayout.setVerticalGroup(
             jpBodyLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jpBodyLayout.createSequentialGroup()
+                .addContainerGap()
                 .addComponent(jpTitle, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jpBodyLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 119, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 160, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(0, 14, Short.MAX_VALUE))
         );
 
@@ -187,11 +188,15 @@ public class MainFrame extends javax.swing.JFrame {
     }//GEN-LAST:event_jQuitActionPerformed
 
     private void jOptionsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jOptionsActionPerformed
-        // TODO add your handling code here:
+OptionsFrame frame = new OptionsFrame();
+frame.startComponents();
+frame.setVisible(true);
+
+// TODO add your handling code here:
     }//GEN-LAST:event_jOptionsActionPerformed
 
     private void jHelpActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jHelpActionPerformed
-       this.helpMenu.display();
+       //this.helpMenu.display();
        HelpFrame helpframe = new HelpFrame();
        helpframe.startComponents();
        helpframe.setVisible(true);

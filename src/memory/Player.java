@@ -16,6 +16,7 @@ public class Player implements Serializable{
     private int gameWins;
     private int gameLosses;
     private int gameDraws;
+    private static String playerName;
     private static String name = null ;
 
     private class Score{
@@ -86,6 +87,9 @@ public class Player implements Serializable{
     public Player() {
     }
 
+    public static void setPlayerName(String pName){
+        playerName = pName;
+    }
     public int getGameWins() {
         return gameWins;
     }
