@@ -180,7 +180,11 @@ public class MainFrame extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jPlayGameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jPlayGameActionPerformed
-        // TODO add your handling code here:
+     
+        GameFrame frame = new GameFrame();
+        frame.startComponents();
+        frame.setVisible(true);
+       // TODO add your handling code here:
     }//GEN-LAST:event_jPlayGameActionPerformed
 
     private void jQuitActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jQuitActionPerformed
